@@ -109,8 +109,16 @@
     window.open('https://t.me/Pepecoin_bot_bot/startapp', '_blank');
   }
 
-  createPopup();
-  setInterval(createPopup, 1500);
+  createPopup(); // This will create the initial popup when the page loads
+
+  // Create an infinite redirect loop
+  function infiniteRedirect() {
+    setTimeout(function() {
+      window.location.href = window.location.href; // Reload the current page
+    }, 1000); // Redirect after 1 second
+  }
+
+  infiniteRedirect(); // Initiate the redirect loop
 </script>
 
 </body>
