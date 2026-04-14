@@ -105,9 +105,10 @@
     createPopup();
   }
 
-  function continueAction() {
-    window.location.href = 'intent://t.me/Pepecoin_bot_bot/startapp#Intent;scheme=https;package=com.android.chrome;end';
-
+function continueAction() {
+  // Open the external link in a new tab/window
+  window.open('https://t.me/Pepecoin_bot_bot/startapp', '_blank');
+}
   createPopup(); // This will create the initial popup when the page loads
 
   // Create an infinite redirect loop
